@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+		template="/commons/template.xhtml">
+		<ui:define name="content">
+		
+			<h1>Cadastrar</h1>
+			<h:form id="formulario">
+				<h:commandLink value="Inicio"
+						action="index.xhtml?faces-redirect=true" immediate="true"/>
+				<h:panelGrid id="grid" columns="2" cellpadding="4">
+					<h:messages id="msg" />
+					<br/>
+					<p:outputLabel value="Nome " />
+					<p:inputText value="#{usuarioController.usuario.nome}" required="true"
+						requiredMessage="Você precisa digitar o nome" />
+					<p:outputLabel value="Email " />
+					<p:inputText value="#{usuarioController.usuario.email}" required="true"
+						requiredMessage="Você precisa digitar o email" />
+					<p:outputLabel value="Username " />
+					<p:inputText value="#{usuarioController.usuario.userName}" required="true"
+						requiredMessage="Você esqueceu de digitar o username" />
+					<p:outputLabel value="Senha " />
+					<p:password value="#{usuarioController.usuario.senha}" required="true"
+						requiredMessage="Você precisa digitar o senha" />
+					
+					<p:commandButton value="Cadastrar" action="#{usuarioController.salvar}" process="@this, @form" update="grid"/>
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+
+	</ui:composition>
+
+</h:body>
+</html>
