@@ -26,7 +26,7 @@ import br.com.klockner.gabriel.service.usuario.UsuarioService;
 * @author Gabriel Klockner
 */
 
-@Component("usuarioController")
+@Component
 @Scope("session")
 public class UsuarioController {
 	private Usuario usuario = new Usuario();
@@ -37,8 +37,8 @@ public class UsuarioController {
 	public void salvar() {
 		usuarioService.salvar(usuario);
 		//TODO verificar se usuario ja existe no banco e mandar mensagem de erro
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, 
-						"Cadastro realizado com sucesso.", null));
+//		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, 
+//						"Cadastro realizado com sucesso.", null));
 	}
 	
 	public UsuarioService getUsuarioService() {
