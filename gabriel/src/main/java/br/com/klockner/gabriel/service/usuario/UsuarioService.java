@@ -19,16 +19,6 @@ public class UsuarioService extends GenericService<Usuario>{
 	@Autowired
 	protected UsuarioDao usuarioDao;
 
-	//ERRO AQUI COM ESSE USUARIODAO /\
-	public void salvar(Usuario usuario) {
-		usuarioDao.salvar(usuario);
-	}
-	
-	@Override
-	public void excluir(Usuario obj) {
-		super.excluir(obj);
-	}
-	
 	public UsuarioDao getUsuarioDao() {
 		return usuarioDao;
 	}

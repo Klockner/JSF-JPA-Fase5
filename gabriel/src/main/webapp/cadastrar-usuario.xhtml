@@ -28,7 +28,7 @@
 						requiredMessage="Você esqueceu de digitar o username" />
 					<p:outputLabel value="Senha " />
 					<p:password value="#{usuarioController.usuario.senha}" required="true"
-						requiredMessage="Você precisa digitar o senha" />
+						requiredMessage="Você precisa digitar a senha" />
 					
 					<p:commandButton value="Cadastrar" action="#{usuarioController.salvar}" process="@this, @form" update="grid"/>
 				</h:panelGrid>

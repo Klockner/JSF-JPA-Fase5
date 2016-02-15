@@ -14,16 +14,4 @@ import br.com.klockner.gabriel.model.usuario.Usuario;
 @Component
 public class UsuarioDao extends GenericDao<Usuario> {
 	
-	//JA FAZ PARTE DA CLASSE POIS ESTENDEU GENERIC DAO
-//	@Override
-//	public void excluir(Usuario obj) {
-//		// TODO Auto-generated method stub
-//		super.excluir(obj);
-//	}
-//	
-//	@Override
-//	public void salvar(Usuario obj) {
-//		// TODO Auto-generated method stub
-//		super.salvar(obj);
-//	}
 }
