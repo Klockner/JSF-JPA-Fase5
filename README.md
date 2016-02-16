@@ -1,4 +1,4 @@
-#JSF, JPA, Spring e Hibernate (Fase 5)
+#JSF, JPA com Hibernate e Spring (Fase 5)
 #Descrição
 Estrutura para projetos JSF, incluindo crud de usuário save() implementado.
 
