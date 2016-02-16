@@ -8,8 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import br.com.klockner.gabriel.util.Model;
 
 /**
  * @author Gabriel Klockner
@@ -17,11 +18,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "usuario")
-public class Usuario {
+public class Usuario implements Model<Long> {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@SequenceGenerator(name = "id_usuario_seq", allocationSize = 1)
 	private Long id;
 
 	@Column(name = "nome", length = 50, nullable = true)
@@ -30,7 +32,7 @@ public class Usuario {
 	@Column(name = "email", length = 50, nullable = true)
 	private String email;
 
-	@Column(name = "user_name", length = 50, nullable = true)
+	@Column(name = "user_name", length = 50, nullable = true, unique = true)
 	private String userName;
 
 	@Column(name = "senha", length = 50, nullable = true)
