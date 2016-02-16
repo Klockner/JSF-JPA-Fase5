@@ -11,6 +11,8 @@ import br.com.klockner.gabriel.model.usuario.Usuario;
  * @author Gabriel Klockner
  */
 @Service
-public class UsuarioService extends GenericService<Usuario>{
+public class UsuarioService extends GenericService<Usuario, Long>{
+
+	private static final long serialVersionUID = 1L;
 	
 }

@@ -10,7 +10,7 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
 		<!-- entidade mapeada -->
-		<class>br.com.klockner.gabriel.model.usuario.Usuario</class>
+<!-- 		<class>br.com.klockner.gabriel.model.usuario.Usuario</class> -->
 
 		<properties>
 			<!-- propriedades do hibernate -->

@@ -27,7 +27,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 
 	public void salvar() {
-		usuarioService.salvar(usuario);
+		usuarioService.save(usuario);
 		//TODO verificar se usuario ja existe no banco e mandar mensagem de erro
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, 
 						"Cadastro realizado com sucesso.", null));
